@@ -12,7 +12,7 @@ html, body {
 }
 
 header {
-    background-color: rgb(11, 11, 11);
+    /* background-color: rgb(11, 11, 11); */
     color: white;
 }
 
@@ -22,22 +22,47 @@ nav {
     width: 100%;
     padding: 2rem 8rem;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     /* border-bottom: 2px solid gray; */
+    height: 12vh;
+    background-color: rgb(11, 11, 11);
+    z-index: 10;
 }
 
 .nav-part-two {
     display: flex;
+    align-items: flex-start;
+    padding: 0.8vh 0vh;
+    position: relative;
+    z-index: 10;
 }
 
-.nav-part-two h4{
+.nav-part-two h4 {
     font-size: 0.8vw;
-    padding: 1vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2.44vw;
+}
+
+.nav-bottom {
+    margin: 0vw 0.8vw ;
+}
+
+.nav-part-two h5 {
+    margin-bottom: 0.8vw;
+    display: none;
+    overflow: hidden;
+}
+
+.nav-part-two h5 span {
+    font-size: 0.8vw;
+    font-weight: 500;
+    display: inline-block;
+    transform: translateY(20px);
 }
 
 nav button {
-    height: 3.2vw;
-    width: 8vw;
+    padding: 0.8vw 1.2vw;
     background-color: #0DA34E;
     color: white;
     border: none;
@@ -45,36 +70,25 @@ nav button {
     font-weight: 700;
 }
 
-.nav-bottom {
-    position: absolute;
+.nav-bottom-options {
     width: 80%;
-    bottom: 0%;
-    height: 0%;
-    border-bottom: 2px solid gray;
-    transition: all 0.8s ease-in-out 0s;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding : 0.5vw 12vw;
-    padding-left: 16vw;
-    padding-top: 3.2vw;
-}
-
-nav:hover .nav-bottom {
-    height: 160%;
-    bottom: -140%;
+    /* height: 0vh; */
+    /* height: 20vh; */
+    position: absolute;
+    top: 100%;
+    z-index: 9;
     background-color: rgb(11, 11, 11);
+    border-bottom: 2px solid white;
+    border-radius: 4px;
 }
 
-.bottom-nav-options h5 {
-    margin: 0.5rem;
-    opacity: 0;
+/* nav:hover .nav-part-two h5{
+    opacity: 1;
 }
 
-.bottom-nav-options h5 span {
-    font-size: 0.8vw;
-    font-weight: 500;
-}
+nav:hover .nav-bottom-options{
+    height: 20vh;
+} */
 
 #pgone {
     height: 100vh;
@@ -118,8 +132,114 @@ nav:hover .nav-bottom {
     padding: 8px 8px ;
 }
 
+.moving-element {
+    margin-top: 12vh;
+    position: absolute;
+    bottom: 8%;
+    width: 48%;
+    white-space: nowrap;
+    padding: 1vw;
+    overflow: hidden;
+}
+
+.blur-effect-left {
+    height: 100%;
+    width: 12%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(to left, transparent, rgb(11,11,11));
+}
+
+.moving-element .moving-images {
+    display: inline-block;
+    animation-name: moving-element;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moving-element .moving-images img{
+    height: 2vw;
+    margin: 0 1vw;
+}
+
+.blur-effect-right {
+    height: 100%;
+    width: 12%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(to right, transparent, rgb(11,11,11));
+}
+
+@keyframes moving-element {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 #pgtwo {
     height: 100vh;
     width: 100%;
     background-color: rgb(11, 11, 11);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 8vw;
+    padding-bottom: 4vw;
+    border-top: 2px solid #333;
+}
+
+.page-two-left {
+    height: 80%;
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2vw 0;
+}
+
+.page-two-left p {
+    color: #999;
+    font-size: 1vw;
+}
+
+.page-two-left h5 {
+    color: #999;
+    width: 76%;
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+.page-two-right {
+    height: 100%;
+    width: 56%;
+}
+
+.right-headlines {
+    position: relative;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    border-bottom: 1px solid #444;
+}
+
+.right-headlines img {
+    height: 8vw;
+    width: 8vw;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+.right-headlines h2 {
+    font-size: 1.6vw;
+    font-weight: 400;
 }
