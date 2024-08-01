@@ -78,17 +78,9 @@ nav button {
     top: 100%;
     z-index: 9;
     background-color: rgb(11, 11, 11);
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #666;
     border-radius: 4px;
 }
-
-/* nav:hover .nav-part-two h5{
-    opacity: 1;
-}
-
-nav:hover .nav-bottom-options{
-    height: 20vh;
-} */
 
 #pgone {
     height: 100vh;
@@ -105,6 +97,7 @@ nav:hover .nav-bottom-options{
     text-transform: uppercase;
     font-weight: 900;
     line-height: 6vw;
+    color: white;
 }   
 
 #pgone h1 svg {
@@ -228,6 +221,7 @@ nav:hover .nav-bottom-options{
     padding-top: 4vw;
     padding-bottom: 4vw;
     border-bottom: 1px solid #444;
+    color: white;
 }
 
 .right-headlines img {
@@ -242,4 +236,168 @@ nav:hover .nav-bottom-options{
 .right-headlines h2 {
     font-size: 1.6vw;
     font-weight: 400;
+}
+
+.pgthree {
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pgthree video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    transform: scaleX(0.8) scaleY(0);
+    opacity: 0;
+    border-radius: 1rem;
+    z-index: 999;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    padding: 4vw;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.icon i {
+    font-size: 2vw;
+    color: black;
+}
+
+.play-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.play-button h5 {
+    font-size: 0.8vw;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    margin-top: 1rem;
+    padding: 0.4vw;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+    transform: translateY(8%);
+}
+
+.play-button:hover h5{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.pgfour {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pgfour-left-div {
+    height: 100%;
+    width: 36%;
+}
+
+.pgfour-left-div p {
+    color: black;
+    font-size: 3vw;
+    font-weight: 600;
+    width: fit-content;
+    margin-top: 4vw;
+    margin-left: 8vw;
+}
+
+.pgfour-right-div {
+    height: 100%;
+    width: 52%;
+}
+
+.pgfour-right-div h4 {
+    margin-top: 4vw;
+    color: #666;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.pgfour-right-div p {
+    margin-top: 2vw;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.4vw;
+}
+
+.pgfive {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.video-part {
+    height: 80vh;
+    width: 100% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw 8vw;
+}
+
+.pgfive-left-part {
+    height: 100%;
+    width: 24%;
+    /* margin-left: 12vw; */
+}
+
+.pgfive-left-part h3,p{
+    color: black;
+}
+
+.pgfive-left-part h3 {
+    padding: 2vw 0vw 0vw 0vw;
+    border-top: 2px solid black;
+    margin-bottom: 6vw;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+.pgfive-left-part p {
+    font-size: 1.1vw;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.pgfive-right-part {
+    color: black;
+    height: 100%;
+    width: 64%;
+    position: relative  ;
+}
+
+.pgfive-right-part img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pgfive-right-part video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in 0s;
 }
